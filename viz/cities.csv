@@ -1,0 +1,90 @@
+,id,latitude,longitude,name,num_parks,state
+0,1,34.052235,-118.24368,Los Angeles,20,California
+1,2,41.878113,-87.6298,Chicago,18,Illinois
+2,3,29.760427,-95.369804,Houston,19,Texas
+3,4,33.448376,-112.074036,Phoenix,18,Arizona
+4,5,39.952583,-75.16522,Philadelphia,19,Pennsylvania
+5,6,29.424122,-98.49363,San Antonio,16,Texas
+6,7,32.715736,-117.16109,San Diego,19,California
+7,8,32.77909,-96.80027,Dallas,19,Texas
+8,9,37.338207,-121.88633,San Jose,14,California
+9,10,30.267153,-97.74306,Austin,17,Texas
+10,11,30.332184,-81.65565,Jacksonville,8,Florida
+11,12,37.77493,-122.41942,San Francisco,18,California
+12,13,39.961174,-82.998795,Columbus,11,Ohio
+13,14,39.768402,-86.158066,Indianapolis,18,Indiana
+14,15,32.75549,-97.330765,Fort Worth,7,Texas
+15,16,35.227085,-80.843124,Charlotte,13,North Carolina
+16,17,47.60621,-122.33207,Seattle,9,Washington
+17,18,39.739235,-104.99025,Denver,20,Colorado
+18,19,31.690363,-106.424545,Ciudad Juarez,7,Texas
+19,20,38.907192,-77.03687,Washington,18,DC
+20,21,42.36008,-71.05888,Boston,11,Massachusetts
+21,22,42.33143,-83.04575,Detroit,17,Michigan
+22,23,36.162663,-86.7816,Nashville,16,Tennessee
+23,24,35.149536,-90.04898,Memphis,5,Tennessee
+24,25,45.523064,-122.67648,Portland,10,Oregon
+25,26,35.46756,-97.516426,Oklahoma City,8,Oklahoma
+26,27,36.16994,-115.13983,Las Vegas,20,Nevada
+27,28,38.252666,-85.75845,Louisville,12,Kentucky
+28,29,39.290386,-76.61219,Baltimore,11,Maryland
+29,30,43.038902,-87.90647,Milwaukee,11,Wisconsin
+30,31,35.084385,-106.65042,Albuquerque,2,New Mexico
+31,32,32.221745,-110.926476,Tucson,5,Arizona
+32,33,36.74684,-119.77258,Fresno,4,California
+33,34,38.581573,-121.4944,Sacramento,16,California
+34,35,33.415184,-111.831474,Mesa,3,Arizona
+35,36,39.099728,-94.57857,Kansas City,20,Missouri
+36,37,33.748997,-84.387985,Atlanta,17,Georgia
+37,39,38.83388,-104.821365,Colorado Springs,9,Colorado
+38,40,35.77959,-78.638176,Raleigh,11,North Carolina
+39,41,25.76168,-80.19179,Miami,17,Florida
+40,42,36.85293,-75.97798,Virginia Beach,6,Virginia
+41,43,41.25654,-95.9345,Omaha,8,Nebraska
+42,44,44.977753,-93.26501,Minneapolis,19,Minnesota
+43,45,36.15398,-95.992775,Tulsa,5,Oklahoma
+44,46,32.735687,-97.10806,Arlington,0,Texas
+45,47,29.951065,-90.07153,New Orleans,5,Louisiana
+46,48,37.687176,-97.330055,Wichita,4,Kansas
+47,49,41.49932,-81.69436,Cleveland,15,Ohio
+48,50,27.950575,-82.45718,Tampa,17,Florida
+49,51,35.37329,-119.018715,Bakersfield,1,California
+50,53,21.306944,-157.85834,Honolulu,5,Hawaii
+51,54,33.836594,-117.9143,Anaheim,6,California
+52,55,33.745472,-117.86765,Santa Ana,1,California
+53,56,27.800583,-97.39638,Corpus Christi,2,Texas
+54,57,33.95335,-117.39616,Riverside,14,California
+55,58,38.040585,-84.503716,Lexington,5,Kentucky
+56,59,38.627003,-90.1994,St. Louis,17,Missouri
+57,60,37.957703,-121.29078,Stockton,2,California
+58,61,40.440624,-79.99589,Pittsburgh,15,Pennsylvania
+59,62,44.9537,-93.08996,Saint Paul,1,Minnesota
+60,63,39.10312,-84.51202,Cincinnati,17,Ohio
+61,64,61.218056,-149.90028,Anchorage,2,Alaska
+62,66,36.072636,-79.79198,Greensboro,10,North Carolina
+63,67,33.019844,-96.69888,Plano,3,Texas
+64,68,40.735657,-74.17236,Newark,17,New Jersey
+65,69,40.825764,-96.685196,Lincoln,1,Nebraska
+66,70,41.652805,-83.537865,Toledo,4,Ohio
+67,71,28.538336,-81.379234,Orlando,15,Florida
+68,73,33.684566,-117.82651,Irvine,0,California
+69,74,41.079273,-85.13935,Fort Wayne,5,Indiana
+70,75,40.728157,-74.077644,Jersey City,2,New Jersey
+71,76,35.994034,-78.89862,Durham,0,North Carolina
+72,77,27.767601,-82.64029,Saint Petersburg,1,Florida
+73,78,27.530567,-99.48032,Laredo,0,Texas
+74,79,42.886448,-78.87837,Buffalo,19,New York
+75,80,43.07305,-89.40123,Madison,6,Wisconsin
+76,81,33.57786,-101.85516,Lubbock,2,Texas
+77,82,33.30616,-111.84125,Chandler,0,Arizona
+78,85,39.529633,-119.813805,Reno,4,Nevada
+79,86,36.85077,-76.28587,Norfolk,1,Virginia
+80,87,36.09986,-80.24422,Winston-Salem,1,North Carolina
+81,88,32.81402,-96.94889,Irving,0,Texas
+82,89,36.768208,-76.28749,Chesapeake,0,Virginia
+83,91,25.857595,-80.27811,Hialeah,3,Florida
+84,92,32.912624,-96.638885,Garland,1,Texas
+85,93,37.54827,-121.98857,Fremont,0,California
+86,94,30.458282,-91.14032,Baton Rouge,9,Louisiana
+87,95,37.540726,-77.43605,Richmond,10,Virginia
+88,96,43.61871,-116.21461,Boise,5,Idaho
