@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import * as d3 from 'd3';
 class Visualization extends Component{
 
 	constructor(props){
@@ -7,8 +7,12 @@ class Visualization extends Component{
 	}
 
 	render(){
+		var dataset = [];
+		d3.csv("state_parks.csv", function(d) {
+			console.log(d);
+		});
 	 	return(
-        <p>Hello there friends</p>
+        <p>LOL</p>
 	    );
 	}
 }
