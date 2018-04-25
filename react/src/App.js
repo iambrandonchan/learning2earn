@@ -11,6 +11,7 @@ import SubjectData from './components/SubjectData.jsx'
 import JobData from './components/JobData.jsx'
 import SearchLanding from './components/SearchLanding.jsx'
 import SearchPage from './components/SearchPage.jsx'
+import Visualization from './components/Visualization.jsx'
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path='/courses/:id' component={CourseData}/>
           <Route path='/subjects/:id' component={SubjectData}/>
           <Route path='/jobs/:id' component={JobData} />
+          <Route exact path='/Viz' component={Visualization} />
           <Route exact path='/search/' component={SearchLanding} />
           <Route exact path='/search/:query' component={SearchPage} />
           <Route path='/searche' component={SearchLanding} />

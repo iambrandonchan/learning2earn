@@ -37,6 +37,9 @@ class MyNavbar extends Component{
             <NavItem eventKey={2} href="/searche/" to="/searche/">
               Search
             </NavItem>
+            <NavItem eventKey={2} href="/viz" to="/viz">
+              Visualiztion
+            </NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
