@@ -10,7 +10,8 @@ class Visualization extends Component{
 		super(props)
 		this.state = {
 	      parks:[],
-	      us_states:[]
+	      us_states:[],
+	      ready: false
 	    }
 	}
 
@@ -23,16 +24,22 @@ class Visualization extends Component{
 		});
 
 		var url_j = "https://raw.githubusercontent.com/iambrandonchan/learning2earn/master/react/src/components/us-states.json";
-		var lmao = [];
-		d3.json(url_j, function(error,json){
-			console.log(typeof json);
-			lmao = json[0].features;
-		});
-
-		this.setState({parks:data, us_states:lmao});
+		
+		fetch(url_j)
+			.then( (res) => { return res.json() })
+			.then( (json) => { 
+				this.setState({parks:data, us_states:json[0]['features'], ready: true}, () => {
+				console.log("lmaoooooooooo")
+			})
+			})
 	}
 
 	render(){
+
+		if (!this.state.ready) {
+			// console.log(this.state)
+			return "<p>gg</p>";
+		}
 
 		var width = 960,
 		    height = 500,
@@ -40,10 +47,14 @@ class Visualization extends Component{
 
 		var projection = d3.geoAlbersUsa()
 		    .scale(width)
-		    .translate([0, 0]);
+		    .translate([width/2, height/2]);
 
 		var path = geoPath()
 		    .projection(projection);
+
+		var color = d3.scaleLinear()
+			  .domain([2,115])
+			  .range(["#fff86b","#f21818"]);
 
 		var svg = d3.select("body").append("svg")
 		    .attr("width", width)
@@ -54,19 +65,35 @@ class Visualization extends Component{
 		    .attr("width", width)
 		    .attr("height", height);
 		    // .on("click", click);
-		
-		console.log(this.state['us_states'])
+		var parks = this.state['parks'];
+		var new_us_states = this.state['us_states'];
+		for (let i = 0; i<parks.length; i++){
+			let state_name = parks[i]['state'];
+			let state_value = parks[i]['num_parks'];
+			for (let j = 0; j<new_us_states.length; j++){
+				let json_state = new_us_states[j]['properties']['NAME']
+				if (state_name == json_state){
+					new_us_states[j]['properties']['num_parks'] = state_value;
+					break;
+				}
+			}
 
-		// svg.selectAll("path")
-		// 	.data(data)
-		// 	.enter()
-		// 	.append("path")
-		// 	.attr("d", path)
-		// 	.style("stroke", "#fff")
-		// 	.style("stroke-width", "1")
-		// 	.style("fill", function(d) {
-		// 		return "rgb(213,222,217)";
-		// 	});
+		}
+
+		svg.selectAll("path")
+			.data(new_us_states)
+			.enter()
+			.append("path")
+			.attr("d", path)
+			.style("stroke", "#fff")
+			.style("stroke-width", "1")
+			.style("fill", function(d) {
+				let value = d['properties']['num_parks'];
+				if (value){
+					return color(value);
+				}
+				return "rgb(213,222,217)";
+			});
 
 	 	return(
         <p>LOL</p>
