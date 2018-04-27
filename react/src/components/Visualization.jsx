@@ -4,6 +4,8 @@ import * as d3 from 'd3';
 import {geoPath} from "d3-geo";
 import { select } from 'd3-selection';
 // import {albersUsa} from "d3-geo-projection";
+import './styles/Visualization.css';
+
 class Visualization extends Component{
 
 	constructor(props){
