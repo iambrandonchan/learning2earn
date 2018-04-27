@@ -43,8 +43,8 @@ class Visualization extends Component{
 			return "<p>gg</p>";
 		}
 
-		var width = 960,
-		    height = 500,
+		var width = 1200,
+		    height = 600,
 		    centered;
 
 		var projection = d3.geoAlbersUsa()
@@ -55,7 +55,7 @@ class Visualization extends Component{
 		    .projection(projection);
 
 		var color = d3.scaleLinear()
-			  .domain([2,115])
+			  .domain([0,115])
 			  .range(["#fff86b","#f21818"]);
 
 		var svg = d3.select("body").append("svg")
@@ -67,6 +67,13 @@ class Visualization extends Component{
 		    .attr("width", width)
 		    .attr("height", height);
 		    // .on("click", click);
+		svg.append("text")
+	        .attr("x", (width / 2))             
+	        .attr("y", (100 / 2))
+	        .attr("text-anchor", "middle")  
+	        .style("font-size", "20px")   
+	        .text("Parks per State Heatmap");
+
 		var parks = this.state['parks'];
 		var new_us_states = this.state['us_states'];
 		for (let i = 0; i<parks.length; i++){
@@ -81,7 +88,9 @@ class Visualization extends Component{
 			}
 
 		}
-
+		var div = d3.select("body").append("div")	
+		    .attr("class", "tooltip")				
+		    .style("opacity", 0);
 		svg.selectAll("path")
 			.data(new_us_states)
 			.enter()
@@ -94,11 +103,28 @@ class Visualization extends Component{
 				if (value){
 					return color(value);
 				}
-				return "rgb(213,222,217)";
-			});
+				return "#fff86b";
+			})
+			.on("mouseover", function(d) {
+				let value = d['properties']['num_parks'];
+				if (!value){
+					value = 0;
+				}		
+	            div.transition()		
+	                .duration(200)		
+	                .style("opacity", .9);		
+	            div	.html(d['properties']['NAME'] + "<br/>"  + value)
+	                .style("left", (d3.event.pageX) + "px")
+	                .style("top", (d3.event.pageY - 28) + "px")
+	         })
+			.on("mouseout", function(d) {		
+	            div.transition()		
+	                .duration(500)		
+	                .style("opacity", 0);	
+        });
 
 	 	return(
-        <p>LOL</p>
+        <p></p>
 	    );
 	}
 }
