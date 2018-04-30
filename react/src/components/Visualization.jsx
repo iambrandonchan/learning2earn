@@ -5,6 +5,8 @@ import {geoPath} from "d3-geo";
 import { select } from 'd3-selection';
 // import {albersUsa} from "d3-geo-projection";
 import './styles/Visualization.css';
+import { BarLoader } from 'react-spinners'
+
 
 class Visualization extends Component{
 
@@ -47,8 +49,7 @@ class Visualization extends Component{
 	render(){
 
 		if (!this.state.ready) {
-			console.log(this.state)
-			return "<p>gg</p>";
+			return (<div><br/><br/><center><BarLoader color={'#123abc'} loading={true} /></center></div>);
 		}
 
 		var parks = this.state['parks'];
@@ -74,11 +75,13 @@ class Visualization extends Component{
 		}
 		var params = ['num_parks','views'];
 		var domains = [[2,115],[0,28902]];
+		var color_scales = [["#fff86b","#f21818"],["#a0edff","#2027f7"]]
 		var titles = ['Parks per State Heatmap', 'Snapshot Views per State Heatmap']
 		for (let i = 0; i<params.length; i++){
 			let param = params[i];
 			var domain = domains[i];
 			var title = titles[i];
+			var color_scale = color_scales[i];
 
 			var width = 1200,
 			    height = 600,
@@ -93,7 +96,7 @@ class Visualization extends Component{
 
 			var color = d3.scaleLinear()
 				  .domain(domain)
-				  .range(["#fff86b","#f21818"]);
+				  .range(color_scale);
 
 			var svg = d3.select("body").append("svg")
 			    .attr("width", width)
@@ -127,7 +130,7 @@ class Visualization extends Component{
 					if (value){
 						return color(value);
 					}
-					return "#fff86b";
+					return color_scale[0];
 				})
 				.on("mouseover", function(d) {
 					let value = d['properties'][param];
